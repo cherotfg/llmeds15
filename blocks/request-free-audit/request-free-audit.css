@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .request-free-audit {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+main .request-free-audit .audit-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  box-sizing: border-box;
+}
+
+main .request-free-audit .audit-header {
+  padding: 0;
+}
+
+main .request-free-audit .audit-hero {
+  width: 100%;
+  max-height: 96px;
+  object-fit: cover;
+  display: block;
+}
+
+main .request-free-audit .audit-header-text {
+  padding: 12px 16px;
+}
+
+main .request-free-audit .audit-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+main .request-free-audit .audit-desc {
+  margin: 6px 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0.75;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+main .request-free-audit .audit-form {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main .request-free-audit .audit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+main .request-free-audit .audit-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.5;
+}
+
+main .request-free-audit .audit-input {
+  font-family: inherit;
+  font-size: 12px;
+  padding: 8px 10px;
+  border: 1px solid #d5dbd8;
+  border-radius: 6px;
+  background: #fff;
+  color: #1c2b24;
+  box-sizing: border-box;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+main .request-free-audit .audit-input::placeholder {
+  color: #9aa5a0;
+}
+
+main .request-free-audit .audit-input:focus {
+  outline: none;
+  border-color: #2a5244;
+  box-shadow: 0 0 0 2px rgba(42, 82, 68, 0.25);
+}
+
+main .request-free-audit .audit-submit {
+  margin-top: 4px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #2a5244;
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+main .request-free-audit .audit-submit:hover {
+  opacity: 0.9;
+}
+
+main .request-free-audit .audit-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+main .request-free-audit .audit-confirm {
+  padding: 20px 16px 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+main .request-free-audit .audit-check {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2a5244;
+  color: #fff;
+  font-size: 22px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+main .request-free-audit .audit-status {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1c2b24;
+}
+
+main .request-free-audit .audit-message {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #4a564f;
+}
+
+main .request-free-audit .audit-id {
+  font-size: 11px;
+  color: #2a5244;
+  font-weight: 600;
+}
+
+/* Dark mode — dim outer background and card, keep palette-colored header intact */
+@media (prefers-color-scheme: dark) {
+  main .request-free-audit { background: #111; }
+  main .request-free-audit .audit-card { background: #181c1a; }
+  main .request-free-audit .audit-input { background: #1e1e1e; color: #e6ece9; border-color: #3a463f; }
+  main .request-free-audit .audit-input::placeholder { color: #7d8a84; }
+  main .request-free-audit .audit-status { color: #e6ece9; }
+  main .request-free-audit .audit-message { color: #b3bfb9; }
+  main .request-free-audit .audit-id { color: #6fae95; }
+}
+
+body.dark main .request-free-audit { background: #111; }
+body.dark main .request-free-audit .audit-card { background: #181c1a; }
+body.dark main .request-free-audit .audit-input { background: #1e1e1e; color: #e6ece9; border-color: #3a463f; }
+body.dark main .request-free-audit .audit-input::placeholder { color: #7d8a84; }
+body.dark main .request-free-audit .audit-status { color: #e6ece9; }
+body.dark main .request-free-audit .audit-message { color: #b3bfb9; }
+body.dark main .request-free-audit .audit-id { color: #6fae95; }
